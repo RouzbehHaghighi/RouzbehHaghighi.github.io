@@ -6,8 +6,7 @@ subtitle: Ph.D. Candidate, Electrical &amp; Computer Engineering, <a href='https
 
 profile:
   align: right
-  <img width="2001" height="2001" alt="RH_2026_Main_Square" src="https://github.com/user-attachments/assets/28118001-338a-4af4-a696-bdab78aa404f" />
-
+  # image: prof_pic.jpg # add your photo as assets/img/prof_pic.jpg, then uncomment this line
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Power Systems Lab</p>
