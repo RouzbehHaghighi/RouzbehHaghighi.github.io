@@ -1,0 +1,194 @@
+cv:
+  name: Rouzbeh Haghighi
+  label: Ph.D. Candidate, Electrical & Computer Engineering — Power Systems & AI
+  email: haghighi@umich.edu
+  location: Dearborn, MI
+  image: ""
+  summary: Doctoral researcher at the intersection of power-system reliability and artificial intelligence, working in two complementary directions — AI for the grid (large language models and reinforcement learning as operational decision-makers) and the grid for AI (integrating large-scale, uncertain AI data-center loads into distribution and transmission networks).
+
+  social_networks:
+    - network: LinkedIn
+      username: haghighirouzbeh
+    - network: GitHub
+      username: RouzbehHaghighi
+    - network: Google Scholar
+      username: D66vE80AAAAJ
+    - network: ORCID
+      username: 0009-0006-7710-1266
+
+  sections:
+    Education:
+      - institution: University of Michigan-Dearborn
+        location: Dearborn, MI, USA
+        area: Electrical, Electronics & Computer Engineering
+        degree: Ph.D.
+        start_date: 2023-08
+        end_date: present
+        highlights:
+          - "GPA: 3.95/4 · Supervisor: Prof. Wencong Su"
+          - "Selected courses: Advanced Topics in Power Systems · Pattern Recognition & Neural Networks · Intelligent Systems"
+
+      - institution: Amirkabir University of Technology (Tehran Polytechnic)
+        location: Tehran, Iran
+        area: Electrical Engineering — Power Systems & Energy Planning
+        degree: M.Sc.
+        start_date: 2019-09
+        end_date: 2022-12
+        highlights:
+          - "Thesis: Short- and Medium-Term Prediction of Effective Parameters (Wind, Solar Irradiance, Load, Battery) for Optimal Control of a Hybrid PV/Wind/Battery Energy System"
+          - "Selected courses: Power System Reliability · Energy Storage Systems · Renewable Energy Resources"
+
+      - institution: K. N. Toosi University of Technology
+        location: Tehran, Iran
+        area: Electrical Engineering — Power Systems
+        degree: B.Sc.
+        start_date: 2014-09
+        end_date: 2018-09
+        highlights:
+          - "Thesis: Reconfiguration of Distribution Networks for Loss Reduction · Supervisor: Prof. Alireza Fereidunian"
+          - "Selected courses: Analysis of Power Systems · Smart Grids & Microgrids · Principles of Optimization"
+
+    Experience:
+      - company: University of Michigan-Dearborn, Dept. of ECE
+        position: Graduate Student Research Assistant
+        location: Dearborn, MI, USA
+        start_date: 2023-08
+        end_date: present
+        summary: Doctoral research on power-system reliability and AI — AI for the grid and the grid for AI.
+        highlights:
+          - "Grid integration of AI data-center loads: hosting-capacity and reliability frameworks quantifying the impact of large, uncertain AI data-center demand on distribution networks, with grid-aware load-coordination and energy-storage strategies."
+          - "LLMs as power-system decision-makers: fine-tuned and multi-agent LLMs for surrogate scheduling, economic dispatch, decentralized Volt/VAR control, and reliability-oriented clustering of DER-rich active distribution networks."
+          - "Reliability assessment under high IBR penetration: stochastic, probabilistic frameworks for reliability and resource-adequacy metrics in grids dominated by inverter-based resources."
+          - "Strategic and economic modeling of storage and carbon policy: Stackelberg–Bayesian and deep-reinforcement-learning models for second-life-battery investment and EV-charging optimization under AI-driven load growth."
+          - "Contributor to NSF project “Enhancing Grid Reliability and Stability with Distributed Energy Resources” (Award #2321661)."
+
+      - company: Danovo Energy Solutions (Quanta Technology LLC)
+        position: Power System Engineering Intern — Transmission Technical Studies
+        location: Raleigh, NC, USA
+        start_date: 2025-05
+        end_date: 2025-08
+        highlights:
+          - Performed transmission system planning and interconnection studies using PSLF, TARA, and PSS/E.
+          - Contributed to the design, optimization, and operational analysis of transmission systems.
+
+      - company: University of Michigan-Dearborn, Dept. of ECE
+        position: Graduate Student Instructor / Teaching Assistant
+        location: Dearborn, MI, USA
+        start_date: 2024-01
+        end_date: 2026-04
+        highlights:
+          - "ECE 5462: Electrical Aspects of Hybrid Vehicles (F-2024)"
+          - "ECE 311: Electronic Circuits I (W-2024)"
+          - "ECE 305: Introduction to Electrical Engineering (W-2024, F-2024)"
+          - "ECE 473: Embedded Systems (W-2024)"
+          - "ECE 210: Circuits, recitation (F-2025, W-2026, F-2026)"
+
+      - company: Power Systems Research Center, Amirkabir University of Technology
+        position: Research Assistant
+        location: Tehran, Iran
+        start_date: 2019-09
+        end_date: 2022-12
+        highlights:
+          - Developed short- and medium-term forecasting models for wind speed, solar irradiance, load, and battery state-of-charge for optimal control of a hybrid PV/wind/battery microgrid.
+          - Game-theoretic generation expansion planning with carbon-curtailment penalties and incentive mechanisms.
+          - Bio-inspired MPPT for photovoltaic systems under partial shading, outperforming conventional P&O methods.
+
+    Volunteer:
+      - company: IEEE-HKN Honor Society, UM-Dearborn
+        position: President
+        location: Dearborn, MI, USA
+        start_date: 2025
+        end_date: 2026
+
+      - company: IEEE Student Branch, UM-Dearborn
+        position: Treasurer
+        location: Dearborn, MI, USA
+        start_date: 2024
+        end_date: 2026
+
+      - company: IEEE-HKN Honor Society, UM-Dearborn
+        position: Treasurer
+        location: Dearborn, MI, USA
+        start_date: 2024
+        end_date: 2025
+
+    Honors and Awards:
+      - title: Best in Department Award (ECE), 2026 Doctoral Research Poster Competition
+        authors:
+          - "College of Engineering & Computer Science, University of Michigan-Dearborn"
+        date: 2026
+        awarder: College of Engineering & Computer Science, University of Michigan-Dearborn
+
+      - title: EXP+ Graduate Student Independent Research Grant
+        authors:
+          - "University of Michigan-Dearborn"
+        date: 2024
+        awarder: University of Michigan-Dearborn (2024–2025)
+        url: https://umdearborn.edu/academic-success/success-dearborn/experience-plus/student-research-opportunities-grants
+
+      - title: Doctoral Student Conference Travel Grant
+        authors:
+          - "CECS, University of Michigan-Dearborn"
+        date: 2024
+        awarder: CECS, University of Michigan-Dearborn — awarded two consecutive years (2024–2025)
+
+      - title: Top 1.5% in Iran’s National University Entrance Exam
+        authors:
+          - "Iran National University Entrance Exam"
+        date: 2014
+        awarder: Undergraduate entrance exam, among more than 223,000 candidates, Tehran, Iran
+
+    Professional Service:
+      - bullet: "**Peer reviewer**, 150+ reviews — IEEE Transactions on Smart Grid (2023–present); IEEE Access (2022–present); IEEE Transactions on Vehicular Technology (2024–present); IEEE Transactions on Transportation Electrification (2026–present); IEEE Journal of Modern Power Systems and Clean Energy (2025–present); IET Generation, Transmission & Distribution (2026–present)"
+      - bullet: "**Peer reviewer, Elsevier** — Applied Energy; Energy and AI; Sustainable Energy, Grids and Networks; Journal of Energy Storage; SoftwareX (2026–present); Sustainable Energy Technologies and Assessments; Computers & Industrial Engineering (2025–present)"
+      - bullet: "**Conference reviewer** — IEEE PESGM 2025; IEEE ECCE 2025; SEST 2026; NAPS 2026"
+      - bullet: "**Judge**, IEEE Future Tech Explorers Challenge (Apr. 2026); SURE Undergraduate Research Showcase, University of Michigan (Sep. 2025)"
+      - bullet: "**Executive committee member**, 25th Iranian Conference on Electrical Engineering (May 2017); 12th Student Seminar on Smart Grid, K. N. Toosi University (Jan. 2018)"
+      - bullet: "**Memberships** — IEEE Graduate Student Member; IEEE Power & Energy Society; IEEE-HKN; IEEE TechEthics; IEEE Industry Applications Society"
+
+    Certificates:
+      - name: "Understanding AI Load Profiles: What the Grid Needs to Know"
+        issuer: Quanta Technology, Raleigh, NC
+        date: 2025-08
+        icon: fa-solid fa-chalkboard-user
+
+      - name: AI Capabilities and Business Process
+        issuer: Quanta Technology, Raleigh, NC
+        date: 2025-07
+        icon: fa-solid fa-chalkboard-user
+
+      - name: Diversity, Equity & Inclusion (DEI) Certificate
+        issuer: Rackham Graduate School, University of Michigan
+        date: 2025
+        icon: fa-solid fa-certificate
+
+      - name: Hardware-in-the-Loop Simulation for Digital Power Innovation in e-Mobility and Grid Modernization
+        issuer: Typhoon HIL / LS Electric, University of Michigan-Dearborn
+        date: 2024-04
+        icon: fa-solid fa-chalkboard-user
+
+    Skills:
+      - name: Programming
+        icon: fa-solid fa-code
+        keywords: "Python, MATLAB"
+
+      - name: Machine learning
+        icon: fa-solid fa-brain
+        keywords: "PyTorch, TensorFlow, Keras, MATLAB/Simulink"
+
+      - name: Optimization
+        icon: fa-solid fa-chart-line
+        keywords: "Pyomo, YALMIP, GAMS, Gurobi, CPLEX, MOSEK"
+
+      - name: Power-system software
+        icon: fa-solid fa-bolt
+        keywords: "PSLF, PSS/E, TARA, ASPEN OneLiner, PowerWorld, DIgSILENT PowerFactory, MATPOWER, pandapower"
+
+      - name: Engineering tools
+        icon: fa-solid fa-screwdriver-wrench
+        keywords: "PSpice, Altium Designer, PLC programming, AutoCAD, LaTeX"
+
+    Interests:
+      - name: Research
+        icon: fa-solid fa-magnifying-glass
+        keywords: "Power-system modeling and optimization, reliability and resilience, AI data-center grid integration, LLMs in power systems, energy management and demand response, renewable integration, energy storage"

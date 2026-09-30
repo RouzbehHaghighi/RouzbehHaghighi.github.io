@@ -1,0 +1,11 @@
+# this file contains the social media links and usernames of the author
+# the socials will be displayed in the order they are defined here
+# for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
+email: haghighi@umich.edu # your email address
+scholar_userid: D66vE80AAAAJ # your Google Scholar ID
+linkedin_username: haghighirouzbeh # your LinkedIn user name
+orcid_id: 0009-0006-7710-1266 # your ORCID ID
+research_gate_profile: Rouzbeh-Haghighi # your profile on ResearchGate
+scopus_id: 57284537900 # your profile on Scopus
+github_username: RouzbehHaghighi # your GitHub user name
+rss_icon: false # comment this line to hide the RSS icon
