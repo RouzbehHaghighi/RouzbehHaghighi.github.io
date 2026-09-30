@@ -1,0 +1,199 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Rouzbeh Haghighi
+  given: Rouzbeh
+  family: Haghighi
+  alternate: ''
+  pronunciation: ''
+  pronouns: ''
+postnominals: []
+status:
+  icon: ''
+role: Ph.D. Candidate, Electrical & Computer Engineering
+bio: |
+  Rouzbeh Haghighi is a Ph.D. candidate in Electrical, Electronics & Computer Engineering at the
+  University of Michigan-Dearborn, advised by Prof. Wencong Su. His research sits at the
+  intersection of power-system reliability and artificial intelligence: large language models and
+  reinforcement learning as operational decision-makers for the grid, and hosting-capacity and
+  reliability frameworks for integrating large, uncertain AI data-center loads into distribution
+  and transmission networks. In 2025 he carried out transmission planning and interconnection
+  studies in PSLF, TARA, and PSS/E as a Power System Engineering Intern with Quanta Technology.
+
+affiliations:
+  - name: University of Michigan-Dearborn
+    url: https://umdearborn.edu/
+
+links:
+  - icon: at-symbol
+    url: mailto:haghighi@umich.edu
+    label: E-mail Me
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=D66vE80AAAAJ
+    label: Google Scholar
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/haghighirouzbeh/
+    label: LinkedIn
+  - icon: academicons/orcid
+    url: https://orcid.org/0009-0006-7710-1266
+    label: ORCID
+  - icon: academicons/researchgate
+    url: https://www.researchgate.net/profile/Rouzbeh-Haghighi
+    label: ResearchGate
+  - icon: academicons/scopus
+    url: https://www.scopus.com/authid/detail.uri?authorId=57284537900
+    label: Scopus
+  - icon: brands/github
+    url: https://github.com/RouzbehHaghighi
+    label: GitHub
+
+interests:
+  - Power-System Reliability & Resilience
+  - AI Data-Center Grid Integration
+  - Large Language Models for Grid Operation
+  - Energy Storage & Second-Life Batteries
+  - Optimization & Game Theory
+
+# Education: shown as cards on the About page and as a list on the CV page.
+education:
+  - degree: Ph.D., Electrical, Electronics & Computer Engineering
+    institution: University of Michigan-Dearborn
+    location: Dearborn, MI, USA
+    start: 2023-08-01
+    year: 2023 – present
+    summary: |
+      GPA 3.95/4 · Supervisor: Prof. Wencong Su
+  - degree: M.Sc., Electrical Engineering (Power Systems & Energy Planning)
+    institution: Amirkabir University of Technology (Tehran Polytechnic)
+    location: Tehran, Iran
+    start: 2019-09-01
+    end: 2022-12-31
+    year: 2019 – 2022
+    summary: |
+      Thesis: Short- and medium-term prediction of wind, solar irradiance, load, and battery parameters for optimal control of a hybrid PV/wind/battery energy system.
+  - degree: B.Sc., Electrical Engineering (Power Systems)
+    institution: K. N. Toosi University of Technology
+    location: Tehran, Iran
+    start: 2014-09-01
+    end: 2018-09-30
+    year: 2014 – 2018
+    summary: |
+      Thesis: Reconfiguration of distribution networks for loss reduction · Supervisor: Prof. Alireza Fereidunian
+
+# Experience: shown on the CV page.
+experience:
+  - role: Graduate Student Research Assistant
+    org: University of Michigan-Dearborn, Dept. of ECE
+    location: Dearborn, MI, USA
+    start: 2023-08-01
+    highlights:
+      - Hosting-capacity and reliability frameworks for large, uncertain AI data-center loads in distribution networks, with grid-aware load coordination and energy-storage strategies.
+      - Fine-tuned and multi-agent LLMs for surrogate scheduling, economic dispatch, decentralized Volt/VAR control, and reliability-oriented clustering of DER-rich active distribution networks.
+      - Stochastic reliability and resource-adequacy assessment for grids dominated by inverter-based resources.
+      - Stackelberg–Bayesian and deep-reinforcement-learning models for second-life battery investment and EV charging under AI-driven load growth.
+      - Contributor to NSF project “Enhancing Grid Reliability and Stability with Distributed Energy Resources” (Award #2321661).
+  - role: Power System Engineering Intern, Transmission Technical Studies
+    org: Danovo Energy Solutions (Quanta Technology LLC)
+    location: Raleigh, NC, USA
+    start: 2025-05-01
+    end: 2025-08-31
+    highlights:
+      - Transmission system planning and interconnection studies using PSLF, TARA, and PSS/E.
+      - Contributed to the design, optimization, and operational analysis of transmission systems.
+  - role: Graduate Student Instructor / Teaching Assistant
+    org: University of Michigan-Dearborn, Dept. of ECE
+    location: Dearborn, MI, USA
+    start: 2024-01-01
+    end: 2026-04-30
+    highlights:
+      - Five undergraduate and graduate courses; see the Teaching page.
+  - role: Research Assistant
+    org: Power Systems Research Center, Amirkabir University of Technology
+    location: Tehran, Iran
+    start: 2019-09-01
+    end: 2022-12-31
+    highlights:
+      - Short- and medium-term forecasting of wind speed, solar irradiance, load, and battery state of charge for optimal control of a hybrid PV/wind/battery microgrid.
+      - ML-based forecasting integrated into the energy management strategy to improve energy efficiency and dynamic control performance.
+
+skills:
+  - name: Power-system software
+    items:
+      - label: PSLF, PSS/E, TARA, ASPEN OneLiner, PowerWorld, DIgSILENT PowerFactory, MATPOWER, pandapower
+  - name: Optimization
+    items:
+      - label: Pyomo, YALMIP, GAMS, Gurobi, CPLEX, MOSEK
+  - name: Machine learning
+    items:
+      - label: PyTorch, TensorFlow, Keras, MATLAB/Simulink
+  - name: Programming
+    items:
+      - label: Python, MATLAB
+  - name: Engineering tools
+    items:
+      - label: PSpice, Altium Designer, PLC programming, AutoCAD, LaTeX
+
+awards:
+  - title: Best in Department Award (ECE), Doctoral Research Poster Competition
+    awarder: College of Engineering & Computer Science, University of Michigan-Dearborn
+    date: '2026'
+  - title: EXP+ Graduate Student Independent Research Grant
+    awarder: University of Michigan-Dearborn
+    date: '2024 – 2025'
+    url: https://umdearborn.edu/academic-success/success-dearborn/experience-plus/student-research-opportunities-grants
+  - title: Doctoral Student Conference Travel Grant (two consecutive years)
+    awarder: College of Engineering & Computer Science, University of Michigan-Dearborn
+    date: '2024 – 2025'
+  - title: Top 1.5% in Iran’s National University Entrance Exam
+    awarder: Among more than 223,000 candidates
+    date: '2014'
+
+# The sections below are read by the CV page (layouts/_partials/hbx/blocks/cv-itemized).
+service:
+  - title: Peer reviewer, 150+ reviews
+    detail: IEEE Transactions on Smart Grid (2023–present) · IEEE Access (2022–present) · IEEE Transactions on Vehicular Technology (2024–present) · IEEE Transactions on Transportation Electrification (2026–present) · IEEE Journal of Modern Power Systems and Clean Energy (2025–present) · IET Generation, Transmission & Distribution (2026–present)
+  - title: Peer reviewer, Elsevier journals
+    detail: Applied Energy · Energy and AI · Sustainable Energy, Grids and Networks · Journal of Energy Storage · SoftwareX (2026–present) · Sustainable Energy Technologies and Assessments · Computers & Industrial Engineering (2025–present)
+  - title: Conference reviewer
+    detail: IEEE PESGM 2025 · IEEE ECCE 2025 · SEST 2026 · NAPS 2026
+  - title: Judge, IEEE Future Tech Explorers Challenge
+    date: Apr 2026
+  - title: Judge, SURE Undergraduate Research Showcase, University of Michigan
+    date: Sep 2025
+  - title: Executive Committee, 12th Student Seminar on Smart Grid, K. N. Toosi University
+    date: Jan 2018
+  - title: Executive Committee, 25th Iranian Conference on Electrical Engineering (ICEE 2017)
+    date: May 2017
+  - title: Volunteer Teacher, Iranian National University Entrance Examination Program
+    date: 2015 – 2016
+
+leadership:
+  - title: President, IEEE-HKN Honor Society, UM-Dearborn
+    date: 2025 – 2026
+  - title: Treasurer, IEEE Student Branch, UM-Dearborn
+    date: 2024 – 2026
+  - title: Treasurer, IEEE-HKN Honor Society, UM-Dearborn
+    date: 2024 – 2025
+
+memberships:
+  - title: Graduate Student Member, IEEE
+    date: 2023 – present
+  - title: Member, IEEE Power & Energy Society
+    date: 2023 – present
+  - title: Member, IEEE-HKN Honor Society
+    date: 2024 – present
+  - title: Member, IEEE TechEthics Community
+    date: 2025 – present
+  - title: Member, IEEE Industry Applications Society
+    date: 2025 – present
+
+training:
+  - title: '“Understanding AI Load Profiles: What the Grid Needs to Know,” Quanta Technology, Raleigh, NC'
+    date: Aug 2025
+  - title: “AI Capabilities and Business Process,” Quanta Technology, Raleigh, NC
+    date: Jul 2025
+  - title: Diversity, Equity & Inclusion Certificate, Rackham Graduate School, University of Michigan
+    date: '2025'
+  - title: “Harnessing Hardware-in-the-Loop Simulation for Digital Power Innovation in e-Mobility and Grid Modernization,” Typhoon HIL / LS Electric
+    date: Apr 2024
