@@ -1,6 +1,3 @@
-schema: hugoblox/author/v1
-slug: me
-is_owner: true
 name:
   display: Rouzbeh Haghighi
   given: Rouzbeh
@@ -11,7 +8,9 @@ name:
 postnominals: []
 status:
   icon: ''
-role: Ph.D. Candidate, Electrical & Computer Engineering
+role: Ph.D. Candidate, Electrical, Electronics & Computer Engineering
+tagline: Electrical Engineer — Power Systems & AI
+location: Power Systems Lab, University of Michigan, 4901 Evergreen Rd, Dearborn, MI 48128
 bio: |
   Rouzbeh Haghighi is a Ph.D. candidate in Electrical, Electronics & Computer Engineering at the
   University of Michigan-Dearborn, advised by Prof. Wencong Su. His research sits at the
@@ -26,113 +25,143 @@ affiliations:
     url: https://umdearborn.edu/
 
 links:
-  - icon: at-symbol
-    url: mailto:haghighi@umich.edu
-    label: E-mail Me
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=D66vE80AAAAJ
-    label: Google Scholar
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/in/haghighirouzbeh/
+  - url: mailto:haghighi@umich.edu
+    label: haghighi@umich.edu
+  - url: mailto:haghighirouzbeh@gmail.com
+    label: haghighirouzbeh@gmail.com
+  - url: tel:+13136745924
+    label: +1 (313) 674-5924
+  - url: https://www.linkedin.com/in/haghighirouzbeh/
     label: LinkedIn
-  - icon: academicons/orcid
-    url: https://orcid.org/0009-0006-7710-1266
-    label: ORCID
-  - icon: academicons/researchgate
-    url: https://www.researchgate.net/profile/Rouzbeh-Haghighi
+  - url: https://scholar.google.com/citations?user=D66vE80AAAAJ
+    label: Google Scholar
+  - url: https://www.researchgate.net/profile/Rouzbeh-Haghighi
     label: ResearchGate
-  - icon: academicons/scopus
-    url: https://www.scopus.com/authid/detail.uri?authorId=57284537900
+  - url: https://www.scopus.com/authid/detail.uri?authorId=57284537900
     label: Scopus
-  - icon: brands/github
-    url: https://github.com/RouzbehHaghighi
+  - url: https://orcid.org/0009-0006-7710-1266
+    label: ORCID
+  - url: https://github.com/RouzbehHaghighi
     label: GitHub
 
 interests:
-  - Power-System Reliability & Resilience
-  - AI Data-Center Grid Integration
-  - Large Language Models for Grid Operation
-  - Energy Storage & Second-Life Batteries
-  - Optimization & Game Theory
+  - Power System Modeling and Optimization
+  - Smart Grid Technologies and Applications
+  - Energy Management and Demand Response
+  - Integration of Renewable Energy Technologies
+  - Reliability and Resilience in Power Systems
+  - AI and Large Language Models in Power Systems
+  - Advanced Machine Learning and Deep Learning
 
 # Education: shown as cards on the About page and as a list on the CV page.
 education:
-  - degree: Ph.D., Electrical, Electronics & Computer Engineering
+  - degree: Ph.D. Candidate, Electrical, Electronics & Computer Engineering
     institution: University of Michigan-Dearborn
     location: Dearborn, MI, USA
     start: 2023-08-01
-    year: 2023 – present
+    year: Aug 2023 – present
     summary: |
       GPA 3.95/4 · Supervisor: Prof. Wencong Su
-  - degree: M.Sc., Electrical Engineering (Power Systems & Energy Planning)
+    courses:
+      - Advanced Topics in Power Systems
+      - Pattern Recognition & Neural Networks
+      - Intelligent Systems
+  - degree: M.Sc., Electrical Engineering — Power Systems & Energy Planning
     institution: Amirkabir University of Technology (Tehran Polytechnic)
     location: Tehran, Iran
     start: 2019-09-01
     end: 2022-12-31
-    year: 2019 – 2022
+    year: Sep 2019 – Dec 2022
     summary: |
-      Thesis: Short- and medium-term prediction of wind, solar irradiance, load, and battery parameters for optimal control of a hybrid PV/wind/battery energy system.
-  - degree: B.Sc., Electrical Engineering (Power Systems)
+      Thesis: Short- and Medium-Term Prediction of Effective Parameters (Wind, Solar Irradiance, Load, Battery) for Optimal Control of a Hybrid PV/Wind/Battery Energy System.
+    courses:
+      - Power System Reliability
+      - Energy Storage Systems
+      - Renewable Energy Resources
+  - degree: B.Sc., Electrical Engineering — Power Systems
     institution: K. N. Toosi University of Technology
     location: Tehran, Iran
     start: 2014-09-01
     end: 2018-09-30
-    year: 2014 – 2018
+    year: Sep 2014 – Sep 2018
     summary: |
-      Thesis: Reconfiguration of distribution networks for loss reduction · Supervisor: Prof. Alireza Fereidunian
+      Supervisor: Prof. Alireza Fereidunian · Thesis: Reconfiguration of Distribution Networks for Loss Reduction.
+    courses:
+      - Analysis of Power Systems
+      - Smart Grids & Microgrids
+      - Principles of Optimization
 
 # Experience: shown on the CV page.
 experience:
-  - role: Graduate Student Research Assistant
-    org: University of Michigan-Dearborn, Dept. of ECE
-    location: Dearborn, MI, USA
-    start: 2023-08-01
-    highlights:
-      - Hosting-capacity and reliability frameworks for large, uncertain AI data-center loads in distribution networks, with grid-aware load coordination and energy-storage strategies.
-      - Fine-tuned and multi-agent LLMs for surrogate scheduling, economic dispatch, decentralized Volt/VAR control, and reliability-oriented clustering of DER-rich active distribution networks.
-      - Stochastic reliability and resource-adequacy assessment for grids dominated by inverter-based resources.
-      - Stackelberg–Bayesian and deep-reinforcement-learning models for second-life battery investment and EV charging under AI-driven load growth.
-      - Contributor to NSF project “Enhancing Grid Reliability and Stability with Distributed Energy Resources” (Award #2321661).
-  - role: Power System Engineering Intern, Transmission Technical Studies
+  - role: Power System Engineering Intern — Transmission Technical Studies
     org: Danovo Energy Solutions (Quanta Technology LLC)
     location: Raleigh, NC, USA
     start: 2025-05-01
     end: 2025-08-31
     highlights:
-      - Transmission system planning and interconnection studies using PSLF, TARA, and PSS/E.
+      - Performed transmission system planning and interconnection studies using PSLF, TARA, and PSS/E.
       - Contributed to the design, optimization, and operational analysis of transmission systems.
-  - role: Graduate Student Instructor / Teaching Assistant
+  - role: Graduate Student Research Assistant (GSRA)
+    org: University of Michigan-Dearborn, Dept. of ECE
+    location: Dearborn, MI, USA
+    start: 2023-08-01
+    highlights:
+      - "Conducting doctoral research at the intersection of power-system reliability and artificial intelligence along two complementary directions: AI for the grid, LLMs and reinforcement learning as operational decision-makers, and the grid for AI, integrating large-scale, uncertain AI data-center loads into distribution and transmission networks."
+      - Contributor to NSF Project “Enhancing Grid Reliability and Stability with Distributed Energy Resources” (Award #2321661).
+      - "Grid Integration of AI Data-Center Loads: hosting-capacity and reliability frameworks for large, uncertain AI data-center demand, with grid-aware load coordination and energy-storage strategies."
+      - "LLMs as Power-System Decision-Makers: fine-tuned and multi-agent LLMs for surrogate scheduling, economic dispatch, decentralized Volt/VAR control, and reliability-oriented clustering of DER-rich active distribution networks."
+      - "Reliability Assessment under High IBR Penetration: stochastic, probabilistic frameworks for reliability and resource-adequacy metrics on grids dominated by inverter-based resources."
+      - "Strategic and economic modeling of storage and carbon policy: Stackelberg–Bayesian and deep-reinforcement-learning models for second-life battery investment and EV charging under AI-driven load growth and carbon regulation."
+  - role: Graduate Student Instructor (GSI) / Teaching Assistant
     org: University of Michigan-Dearborn, Dept. of ECE
     location: Dearborn, MI, USA
     start: 2024-01-01
     end: 2026-04-30
     highlights:
-      - Five undergraduate and graduate courses; see the Teaching page.
+      - "ECE 5462, Electrical Aspects of Hybrid Vehicles (Fall 2024)."
+      - "ECE 311, Electronic Circuits I (Winter 2024)."
+      - "ECE 305, Introduction to Electrical Engineering (Winter 2024, Fall 2024)."
+      - "ECE 473, Embedded Systems (Winter 2024)."
+      - "ECE 210, Circuits, recitation (Fall 2025, Winter 2026, Fall 2026)."
   - role: Research Assistant
     org: Power Systems Research Center, Amirkabir University of Technology
     location: Tehran, Iran
     start: 2019-09-01
     end: 2022-12-31
     highlights:
-      - Short- and medium-term forecasting of wind speed, solar irradiance, load, and battery state of charge for optimal control of a hybrid PV/wind/battery microgrid.
-      - ML-based forecasting integrated into the energy management strategy to improve energy efficiency and dynamic control performance.
+      - Developed short- and medium-term forecasting models for wind speed, solar irradiance, load, and battery state of charge to enable optimal control of a hybrid PV/wind/battery microgrid.
+      - Improved system energy efficiency and dynamic control performance by integrating ML-based forecasting into the energy management strategy.
+      - "Generation Expansion Planning with Carbon-Reduction Policies: a game-theoretic optimization model for long-term generation expansion, with carbon curtailment penalties and incentive mechanisms."
+      - "Optimization-Based MPPT for Photovoltaic Systems: a bio-inspired MPPT algorithm for PV panels under partial shading."
 
 skills:
-  - name: Power-system software
-    items:
-      - label: PSLF, PSS/E, TARA, ASPEN OneLiner, PowerWorld, DIgSILENT PowerFactory, MATPOWER, pandapower
-  - name: Optimization
-    items:
-      - label: Pyomo, YALMIP, GAMS, Gurobi, CPLEX, MOSEK
-  - name: Machine learning
-    items:
-      - label: PyTorch, TensorFlow, Keras, MATLAB/Simulink
   - name: Programming
     items:
-      - label: Python, MATLAB
+      - label: Python (Advanced), MATLAB (Advanced)
+  - name: ML frameworks
+    items:
+      - label: PyTorch, TensorFlow, Keras, MATLAB/Simulink
+  - name: Optimization solvers
+    items:
+      - label: YALMIP, Pyomo, GAMS, Gurobi, CPLEX, MOSEK
+  - name: Scientific libraries
+    items:
+      - label: MATPOWER, pandapower, NumPy, Pandas, Matplotlib, Plotly, Bnlearn
+  - name: Power-system software
+    items:
+      - label: PSLF, PSS/E, TARA, ASPEN OneLiner, PowerWorld, DIgSILENT PowerFactory (familiar; simulation experience)
   - name: Engineering tools
     items:
-      - label: PSpice, Altium Designer, PLC programming, AutoCAD, LaTeX
+      - label: PSpice, Altium Designer, PLC programming, AutoCAD
+  - name: Operating systems
+    items:
+      - label: Windows, macOS, Linux
+  - name: Productivity and writing
+    items:
+      - label: LaTeX, Microsoft Office
+  - name: Soft skills
+    items:
+      - label: Technical writing, data analysis and visualization, teamwork, communication
 
 awards:
   - title: Best in Department Award (ECE), Doctoral Research Poster Competition
@@ -149,21 +178,21 @@ awards:
     awarder: Among more than 223,000 candidates
     date: '2014'
 
-# The sections below are read by the CV page (layouts/_partials/hbx/blocks/cv-itemized).
+# The sections below are read by the CV page.
 service:
   - title: Peer reviewer, 150+ reviews
     detail: IEEE Transactions on Smart Grid (2023–present) · IEEE Access (2022–present) · IEEE Transactions on Vehicular Technology (2024–present) · IEEE Transactions on Transportation Electrification (2026–present) · IEEE Journal of Modern Power Systems and Clean Energy (2025–present) · IET Generation, Transmission & Distribution (2026–present)
   - title: Peer reviewer, Elsevier journals
-    detail: Applied Energy · Energy and AI · Sustainable Energy, Grids and Networks · Journal of Energy Storage · SoftwareX (2026–present) · Sustainable Energy Technologies and Assessments · Computers & Industrial Engineering (2025–present)
+    detail: Applied Energy (2026–present) · Energy and AI (2026–present) · Sustainable Energy, Grids and Networks (2026–present) · Journal of Energy Storage (2026–present) · SoftwareX (2026–present) · Sustainable Energy Technologies and Assessments (2025–present) · Computers & Industrial Engineering (2025–present)
   - title: Conference reviewer
-    detail: IEEE PESGM 2025 · IEEE ECCE 2025 · SEST 2026 · NAPS 2026
+    detail: IEEE PESGM 2025 · IEEE ECCE 2025 · International Conference on Smart Energy Systems and Technologies (SEST) 2026 · North American Power Symposium (NAPS) 2026
   - title: Judge, IEEE Future Tech Explorers Challenge
     date: Apr 2026
   - title: Judge, SURE Undergraduate Research Showcase, University of Michigan
     date: Sep 2025
   - title: Executive Committee, 12th Student Seminar on Smart Grid, K. N. Toosi University
     date: Jan 2018
-  - title: Executive Committee, 25th Iranian Conference on Electrical Engineering (ICEE 2017)
+  - title: Executive Committee, 25th Iranian Conference on Electrical Engineering (ICEEE 2017)
     date: May 2017
   - title: Volunteer Teacher, Iranian National University Entrance Examination Program
     date: 2015 – 2016
@@ -179,7 +208,7 @@ leadership:
 memberships:
   - title: Graduate Student Member, IEEE
     date: 2023 – present
-  - title: Member, IEEE Power & Energy Society
+  - title: Member, IEEE Power & Energy Society (PES)
     date: 2023 – present
   - title: Member, IEEE-HKN Honor Society
     date: 2024 – present
@@ -195,5 +224,19 @@ training:
     date: Jul 2025
   - title: Diversity, Equity & Inclusion Certificate, Rackham Graduate School, University of Michigan
     date: '2025'
-  - title: “Harnessing Hardware-in-the-Loop Simulation for Digital Power Innovation in e-Mobility and Grid Modernization,” Typhoon HIL / LS Electric
+  - title: “Harnessing Hardware-in-the-Loop Simulation for Digital Power Innovation in e-Mobility and Grid Modernization,” Typhoon HIL / LS Electric, University of Michigan-Dearborn
     date: Apr 2024
+
+references:
+  - name: Prof. Wencong Su
+    role: Chair and Professor
+    org: Electrical and Computer Engineering, University of Michigan-Dearborn
+    email: wencong@umich.edu
+  - name: Dr. Van-Hai Bui
+    role: Assistant Professor
+    org: Electrical and Computer Engineering, University of Michigan-Dearborn
+    email: vhbui@umich.edu
+  - name: Dr. Guilherme Hollweg
+    role: Assistant Professor
+    org: Electrical and Computer Engineering, University of Michigan-Dearborn
+    email: hollweg@umich.edu

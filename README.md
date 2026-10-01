@@ -2,34 +2,37 @@
 
 Source for [rouzbehhaghighi.github.io](https://rouzbehhaghighi.github.io), the academic website of Rouzbeh Haghighi, Ph.D. candidate in Electrical & Computer Engineering at the University of Michigan-Dearborn.
 
-Built with [Hugo](https://gohugo.io/) and the [HugoBlox academic-cv](https://github.com/HugoBlox/hugo-theme-academic-cv) template, with custom page layouts for the CV, Publications, and Teaching pages.
+The pages, styles, and text in this repository are written for this site. See `LICENSE`.
 
 ## Where things live
 
 | Page or item          | Edit this                                                                                     |
 | --------------------- | --------------------------------------------------------------------------------------------- |
 | Profile, bio, links   | `data/authors/me.yaml`                                                                        |
-| Profile photo         | `assets/media/authors/me.png` (replace with your photo, square, same file name)               |
-| About (home) page     | `content/_index.md`                                                                           |
-| CV page               | `content/cv.md` (layout) and `data/authors/me.yaml` (education, experience, awards, service…) |
+| Profile photo         | `assets/media/authors/me.png`                                                                 |
+| About (home) page     | `content/_index.md` and `layouts/index.html`                                                  |
+| CV page               | `content/cv.md` and `data/authors/me.yaml`                                                    |
 | Publications          | one folder per paper in `content/publications/` with `index.md` and `cite.bib`                |
 | Manuscripts in review | `content/publications/_index.md`                                                              |
-| Projects              | one folder per project in `content/projects/`; categories come from `tags`                    |
+| Projects              | one folder per project in `content/projects/`                                                 |
+| Professional service  | `content/professional-services.md`                                                            |
 | Teaching              | `content/teaching.md`                                                                         |
 | News                  | one folder per item in `content/blog/`                                                        |
 | Menu                  | `config/_default/menus.yaml`                                                                  |
-| Custom page layouts   | `layouts/_partials/hbx/blocks/` (`cv-itemized`, `pubs-list`, `teaching-list`)                 |
+| Colors and type       | `assets/css/site.css`                                                                         |
+| Page HTML             | `layouts/`                                                                                    |
 
 ## Preview locally
 
+From this folder:
+
 ```bash
-pnpm install
 hugo server
 ```
 
 ## Deployment
 
-Every push to `main` runs the **Deploy site** workflow (`.github/workflows/deploy.yml`), which builds the site and publishes it to the `gh-pages` branch. GitHub Pages serves that branch. Do not edit `gh-pages` directly.
+Every push to `main` runs the **Deploy site** workflow (`.github/workflows/deploy.yml`), which builds the site and publishes it to the `gh-pages` branch. GitHub Pages serves that branch.
 
 ## Contact
 

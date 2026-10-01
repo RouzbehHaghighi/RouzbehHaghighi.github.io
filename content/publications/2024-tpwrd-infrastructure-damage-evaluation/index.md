@@ -21,8 +21,6 @@ tags:
   - "Distribution Systems"
   - "Fragility Curves"
 featured: true
-hugoblox:
-  ids:
-    doi: "10.1109/TPWRD.2024.3368432"
-projects: []
+doi: "10.1109/TPWRD.2024.3368432"
+paper_url: "https://doi.org/10.1109/TPWRD.2024.3368432"
 ---

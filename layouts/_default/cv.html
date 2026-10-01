@@ -1,0 +1,137 @@
+{{ define "main" }}
+{{ $me := site.Data.authors.me }}
+<header class="section">
+  <h1>{{ .Title }}</h1>
+  <div class="page-intro">{{ .Content }}</div>
+</header>
+<div class="layout">
+  <nav aria-label="CV sections">
+    <ul class="toc">
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#awards">Honors &amp; Awards</a></li>
+      <li><a href="#service">Professional Service</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#training">Workshops &amp; Training</a></li>
+      <li><a href="#memberships">Memberships</a></li>
+      <li><a href="#references">References</a></li>
+    </ul>
+  </nav>
+  <div>
+    <section class="card" id="education" aria-labelledby="h-education">
+      <h2 id="h-education">Education</h2>
+      {{ range $me.education }}
+        <article class="entry">
+          <div><span class="when">{{ .year }}</span></div>
+          <div>
+            <h3>{{ .degree }}</h3>
+            <p>{{ .institution }}</p>
+            {{ with .location }}<p class="muted">{{ . }}</p>{{ end }}
+            {{ with .summary }}<p>{{ . | plainify }}</p>{{ end }}
+            {{ with .courses }}<p class="muted">Selected courses: {{ delimit . " · " }}</p>{{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </section>
+
+    <section class="card" id="experience" aria-labelledby="h-experience">
+      <h2 id="h-experience">Experience</h2>
+      {{ range $me.experience }}
+        <article class="entry">
+          <div><span class="when">{{ dateFormat "Jan 2006" .start }} – {{ if .end }}{{ dateFormat "Jan 2006" .end }}{{ else }}Present{{ end }}</span></div>
+          <div>
+            <h3>{{ .role }}</h3>
+            <p>{{ .org }}</p>
+            {{ with .location }}<p class="muted">{{ . }}</p>{{ end }}
+            {{ with .highlights }}<ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </section>
+
+    <section class="card" id="awards" aria-labelledby="h-awards">
+      <h2 id="h-awards">Honors &amp; Awards</h2>
+      {{ range $me.awards }}
+        <article class="entry">
+          <div><span class="when">{{ .date }}</span></div>
+          <div>
+            <h3>{{ if .url }}<a href="{{ .url }}">{{ .title }}</a>{{ else }}{{ .title }}{{ end }}</h3>
+            {{ with .awarder }}<p class="muted">{{ . }}</p>{{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </section>
+
+    <section class="card" id="service" aria-labelledby="h-service">
+      <h2 id="h-service">Professional Service</h2>
+      {{ range $me.service }}
+        <article class="entry">
+          <div>{{ with .date }}<span class="when">{{ . }}</span>{{ end }}</div>
+          <div>
+            <h3>{{ .title }}</h3>
+            {{ with .detail }}<p class="muted">{{ . }}</p>{{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </section>
+
+    <section class="card" id="leadership" aria-labelledby="h-leadership">
+      <h2 id="h-leadership">Leadership</h2>
+      {{ range $me.leadership }}
+        <article class="entry">
+          <div><span class="when">{{ .date }}</span></div>
+          <div><h3>{{ .title }}</h3></div>
+        </article>
+      {{ end }}
+    </section>
+
+    <section class="card" id="skills" aria-labelledby="h-skills">
+      <h2 id="h-skills">Skills</h2>
+      {{ range $me.skills }}
+        <article class="entry">
+          <div><strong>{{ .name }}</strong></div>
+          <div>{{ range $i, $item := .items }}{{ if $i }}, {{ end }}{{ $item.label }}{{ end }}</div>
+        </article>
+      {{ end }}
+    </section>
+
+    <section class="card" id="training" aria-labelledby="h-training">
+      <h2 id="h-training">Workshops &amp; Training</h2>
+      {{ range $me.training }}
+        <article class="entry">
+          <div><span class="when">{{ .date }}</span></div>
+          <div>{{ .title }}</div>
+        </article>
+      {{ end }}
+    </section>
+
+    <section class="card" id="memberships" aria-labelledby="h-memberships">
+      <h2 id="h-memberships">Memberships</h2>
+      {{ range $me.memberships }}
+        <article class="entry">
+          <div><span class="when">{{ .date }}</span></div>
+          <div>{{ .title }}</div>
+        </article>
+      {{ end }}
+    </section>
+
+    {{ with $me.references }}
+    <section class="card" id="references" aria-labelledby="h-references">
+      <h2 id="h-references">References</h2>
+      {{ range . }}
+        <article class="entry">
+          <div></div>
+          <div>
+            <h3>{{ .name }}</h3>
+            <p>{{ .role }}</p>
+            <p class="muted">{{ .org }}</p>
+            {{ with .email }}<p><a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
+          </div>
+        </article>
+      {{ end }}
+    </section>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

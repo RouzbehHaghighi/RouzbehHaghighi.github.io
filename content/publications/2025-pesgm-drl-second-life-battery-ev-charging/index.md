@@ -20,8 +20,6 @@ tags:
   - "Second-Life Batteries"
   - "EV Charging"
 featured: true
-hugoblox:
-  ids:
-    doi: "10.1109/PESGM52009.2025.11224996"
-projects: []
+doi: "10.1109/PESGM52009.2025.11224996"
+paper_url: "https://doi.org/10.1109/PESGM52009.2025.11224996"
 ---

@@ -22,8 +22,6 @@ tags:
   - "Inverter-Based Resources"
   - "Survey"
 featured: true
-hugoblox:
-  ids:
-    doi: "10.3390/en17215352"
-projects: []
+doi: "10.3390/en17215352"
+paper_url: "https://doi.org/10.3390/en17215352"
 ---

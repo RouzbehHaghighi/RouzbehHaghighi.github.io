@@ -25,8 +25,6 @@ tags:
   - "Energy Storage"
   - "Review"
 featured: true
-hugoblox:
-  ids:
-    doi: "10.1016/j.adapen.2026.100291"
-projects: []
+doi: "10.1016/j.adapen.2026.100291"
+paper_url: "https://doi.org/10.1016/j.adapen.2026.100291"
 ---

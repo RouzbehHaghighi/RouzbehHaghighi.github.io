@@ -21,8 +21,6 @@ tags:
   - "Second-Life Batteries"
   - "AI Data Centers"
 featured: false
-hugoblox:
-  ids:
-    arxiv: "2608.03989"
-projects: []
+doi: "10.48550/arXiv.2608.03989"
+paper_url: "https://doi.org/10.48550/arXiv.2608.03989"
 ---

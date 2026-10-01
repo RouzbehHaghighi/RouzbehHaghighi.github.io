@@ -20,8 +20,6 @@ tags:
   - "Neural Networks"
   - "Phasor Estimation"
 featured: false
-hugoblox:
-  ids:
-    doi: "10.1109/ICCA62789.2024.10591924"
-projects: []
+doi: "10.1109/ICCA62789.2024.10591924"
+paper_url: "https://doi.org/10.1109/ICCA62789.2024.10591924"
 ---

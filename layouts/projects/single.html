@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article class="section">
+  <p><a href="{{ "projects/" | relURL }}">Projects</a></p>
+  {{ with .Params.status }}<p class="status">{{ . }}</p>{{ end }}
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.tags }}<p class="muted">{{ delimit . " · " }}</p>{{ end }}
+  {{ .Content }}
+  {{ with .Params.links }}
+    <ul class="links">
+      {{ range . }}<li><a href="{{ .url }}">{{ .label }}</a></li>{{ end }}
+    </ul>
+  {{ end }}
+</article>
+{{ end }}

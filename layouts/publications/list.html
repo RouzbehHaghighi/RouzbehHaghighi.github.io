@@ -1,0 +1,50 @@
+{{ define "main" }}
+{{ $pubs := .RegularPages.ByDate.Reverse }}
+{{ $nJournal := len (where $pubs "Params.publication_types" "intersect" (slice "article-journal")) }}
+{{ $nConf := len (where $pubs "Params.publication_types" "intersect" (slice "paper-conference")) }}
+{{ $nChapter := len (where $pubs "Params.publication_types" "intersect" (slice "chapter")) }}
+<header class="section">
+  <h1>{{ .Title }}</h1>
+  <div class="page-intro">{{ .Content }}</div>
+  <ul class="legend" aria-label="Publication types">
+    <li><span class="swatch journal" aria-hidden="true"></span>Journal article ({{ $nJournal }})</li>
+    <li><span class="swatch" aria-hidden="true"></span>Conference paper ({{ $nConf }})</li>
+    <li><span class="swatch chapter" aria-hidden="true"></span>Book chapter ({{ $nChapter }})</li>
+  </ul>
+</header>
+{{ range $pubs.GroupByDate "2006" }}
+  <section class="year-block" aria-labelledby="year-{{ .Key }}">
+    <h2 id="year-{{ .Key }}">{{ .Key }}</h2>
+    <div>
+      {{ range .Pages }}{{ partial "pub.html" . }}{{ end }}
+    </div>
+  </section>
+{{ end }}
+{{ with .Params.theses }}
+  <section class="card" aria-labelledby="theses">
+    <h2 id="theses">Theses</h2>
+    {{ range . }}
+      <article class="entry">
+        <div><span class="when">{{ .year }}</span></div>
+        <div>
+          <h3>{{ .degree }}</h3>
+          <p>{{ .title }}</p>
+          <p class="muted">{{ .institution }}</p>
+        </div>
+      </article>
+    {{ end }}
+  </section>
+{{ end }}
+{{ with .Params.under_review }}
+  <section class="card" aria-labelledby="under-review">
+    <h2 id="under-review">{{ $.Params.under_review_title | default "Manuscripts under review" }}</h2>
+    <p class="muted">Listed by title and venue until accepted.</p>
+    {{ range . }}
+      <article class="entry">
+        <div><span class="when">{{ .status }}</span></div>
+        <div>{{ .title }} · <em>{{ .venue }}</em></div>
+      </article>
+    {{ end }}
+  </section>
+{{ end }}
+{{ end }}

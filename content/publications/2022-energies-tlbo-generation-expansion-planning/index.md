@@ -25,8 +25,6 @@ tags:
   - "Game Theory"
   - "Carbon Policy"
 featured: false
-hugoblox:
-  ids:
-    doi: "10.3390/en15031172"
-projects: []
+doi: "10.3390/en15031172"
+paper_url: "https://doi.org/10.3390/en15031172"
 ---

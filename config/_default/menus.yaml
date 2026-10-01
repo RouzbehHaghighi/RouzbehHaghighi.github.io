@@ -14,6 +14,9 @@ main:
   - name: Projects
     url: projects/
     weight: 40
+  - name: Professional Services
+    url: professional-services/
+    weight: 50
   - name: Teaching
     url: teaching/
-    weight: 50
+    weight: 60

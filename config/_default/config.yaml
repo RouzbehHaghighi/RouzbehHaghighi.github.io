@@ -1,0 +1,19 @@
+baseURL: 'https://rouzbehhaghighi.github.io/'
+languageCode: en-us
+title: Rouzbeh Haghighi
+enableRobotsTXT: true
+disableHugoGeneratorInject: true
+enableEmoji: true
+summaryLength: 40
+disableKinds:
+  - taxonomy
+  - term
+pagination:
+  pagerSize: 10
+params:
+  description: 'Rouzbeh Haghighi, Ph.D. candidate in Electrical and Computer Engineering at the University of Michigan-Dearborn, working on power-system reliability, AI data-center grid integration, and large language models for grid operation.'
+  email: haghighi@umich.edu
+markup:
+  goldmark:
+    renderer:
+      unsafe: false

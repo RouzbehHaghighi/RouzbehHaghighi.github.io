@@ -1,0 +1,32 @@
+{{ $type := index (.Params.publication_types | default (slice "article-journal")) 0 }}
+{{ $kind := "journal" }}
+{{ if eq $type "paper-conference" }}{{ $kind = "conference" }}{{ else if eq $type "chapter" }}{{ $kind = "chapter" }}{{ end }}
+{{ $pub := .Params.publication }}
+{{ $authors := replace (.Params.authors_display | default "") "R. Haghighi" `<strong class="me">R. Haghighi</strong>` | safeHTML }}
+<article class="pub">
+  <div><span class="badge {{ $kind }}">{{ .Params.abbr }}</span></div>
+  <div>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p>{{ $authors }}</p>
+    <p class="muted"><em>{{ $pub.name }}</em>{{ with $pub.volume }}, vol. {{ . }}{{ end }}{{ with $pub.issue }}, no. {{ . }}{{ end }}{{ with $pub.pages }}, {{ if or (in (printf "%v" .) "–") (in (printf "%v" .) "-") }}pp. {{ end }}{{ . }}{{ end }}, {{ .Date.Format "2006" }}{{ with .Params.status_note }} <span class="note">{{ . }}</span>{{ end }}</p>
+    <div class="actions">
+      {{ with .Params.abstract }}
+        <details>
+          <summary>Abstract</summary>
+          <div class="panel">{{ . }}</div>
+        </details>
+      {{ end }}
+      {{ with .Resources.GetMatch "cite.bib" }}
+        <details>
+          <summary>BibTeX</summary>
+          <div class="panel"><pre><code>{{ .Content }}</code></pre></div>
+        </details>
+      {{ end }}
+      {{ if .Params.paper_url }}
+        <a href="{{ .Params.paper_url }}">{{ if in .Params.paper_url "doi.org" }}DOI{{ else }}Paper{{ end }}</a>
+      {{ else if .Params.doi }}
+        <a href="https://doi.org/{{ .Params.doi }}">DOI</a>
+      {{ end }}
+    </div>
+  </div>
+</article>

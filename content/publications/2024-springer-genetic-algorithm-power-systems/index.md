@@ -8,7 +8,7 @@ authors:
 date: '2024-02-21'
 publication_types: ["chapter"]
 publication:
-  name: "Frontiers in Genetics Algorithm Theory and Applications"
+  name: "Frontiers in Genetic Algorithm Theory and Applications"
   pages: "83–97"
   publisher: "Springer Nature Singapore"
 abbr: "Springer"
@@ -18,8 +18,6 @@ tags:
   - "Genetic Algorithm"
   - "Optimization"
 featured: false
-hugoblox:
-  ids:
-    doi: "10.1007/978-981-99-8107-6_5"
-projects: []
+doi: "10.1007/978-981-99-8107-6_5"
+paper_url: "https://link.springer.com/chapter/10.1007/978-981-99-8107-6_5"
 ---

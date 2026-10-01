@@ -20,8 +20,6 @@ tags:
   - "Game Theory"
   - "Carbon Emission"
 featured: false
-hugoblox:
-  ids:
-    doi: "10.1016/j.cie.2021.107713"
-projects: []
+doi: "10.1016/j.cie.2021.107713"
+paper_url: "https://doi.org/10.1016/j.cie.2021.107713"
 ---

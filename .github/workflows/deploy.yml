@@ -1,6 +1,6 @@
 name: Deploy site
 
-# Builds the Hugo site and publishes it to the gh-pages branch, which GitHub Pages serves.
+# Builds the site and publishes it to the gh-pages branch, which GitHub Pages serves.
 on:
   push:
     branches: [main]
@@ -20,39 +20,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Setup Go (for Hugo modules)
-        uses: actions/setup-go@v5
-        with:
-          go-version: '1.24'
-          cache: false
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Install Tailwind and Pagefind
-        run: pnpm install --no-frozen-lockfile
-
-      - name: Setup Hugo
+      - name: Setup site builder
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.162.1'
-          extended: true
+          hugo-version: '0.147.8'
+          extended: false
 
       - name: Build
-        env:
-          HUGO_ENVIRONMENT: production
-        run: hugo --gc --minify
-
-      - name: Build search index
-        run: pnpm run pagefind
+        run: hugo --minify
 
       - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4

@@ -1,0 +1,28 @@
+{{ define "main" }}
+<header class="section">
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.subtitle }}<p class="page-intro">{{ . }}</p>{{ end }}
+</header>
+<div id="project-board">
+  <div class="filters" role="group" aria-label="Filter projects">
+    {{ range $i, $filter := .Params.filters }}
+      <button type="button" data-filter="{{ $filter.tag }}" aria-pressed="{{ if eq $i 0 }}true{{ else }}false{{ end }}">{{ $filter.name }}</button>
+    {{ end }}
+  </div>
+  <div class="cards">
+    {{ range .RegularPages.ByWeight }}
+      <article class="project" data-tags="{{ delimit .Params.tags "|" }}">
+        {{ with .Params.status }}<p class="status">{{ . }}</p>{{ end }}
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Summary }}</p>
+        {{ with .Params.tags }}<p class="muted">{{ delimit . " · " }}</p>{{ end }}
+      </article>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+{{ $js := resources.Get "js/projects.js" | minify }}
+<script src="{{ $js.RelPermalink }}"></script>
+{{ end }}

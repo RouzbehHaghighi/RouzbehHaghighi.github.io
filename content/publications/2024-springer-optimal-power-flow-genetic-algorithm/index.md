@@ -9,7 +9,7 @@ authors:
 date: '2024-02-21'
 publication_types: ["chapter"]
 publication:
-  name: "Frontiers in Genetics Algorithm Theory and Applications"
+  name: "Frontiers in Genetic Algorithm Theory and Applications"
   pages: "121–136"
   publisher: "Springer Nature Singapore"
 abbr: "Springer"
@@ -19,8 +19,6 @@ tags:
   - "Optimal Power Flow"
   - "Genetic Algorithm"
 featured: false
-hugoblox:
-  ids:
-    doi: "10.1007/978-981-99-8107-6_7"
-projects: []
+doi: "10.1007/978-981-99-8107-6_7"
+paper_url: "https://link.springer.com/chapter/10.1007/978-981-99-8107-6_7"
 ---

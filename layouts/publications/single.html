@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ $type := index (.Params.publication_types | default (slice "article-journal")) 0 }}
+{{ $kind := "journal" }}
+{{ if eq $type "paper-conference" }}{{ $kind = "conference" }}{{ else if eq $type "chapter" }}{{ $kind = "chapter" }}{{ end }}
+{{ $pub := .Params.publication }}
+<article class="section">
+  <p><a href="{{ "publications/" | relURL }}">Publications</a></p>
+  <p><span class="badge {{ $kind }}">{{ .Params.abbr }}</span></p>
+  <h1>{{ .Title }}</h1>
+  <p>{{ replace (.Params.authors_display | default "") "R. Haghighi" `<strong class="me">R. Haghighi</strong>` | safeHTML }}</p>
+  <p class="muted"><em>{{ $pub.name }}</em>{{ with $pub.publisher }}, {{ . }}{{ end }}, {{ .Date.Format "2006" }}{{ with .Params.status_note }} <span class="note">{{ . }}</span>{{ end }}</p>
+  <div class="actions">
+    {{ if .Params.paper_url }}
+      <a href="{{ .Params.paper_url }}">{{ if in .Params.paper_url "doi.org" }}DOI{{ else }}Paper{{ end }}</a>
+    {{ else if .Params.doi }}
+      <a href="https://doi.org/{{ .Params.doi }}">DOI</a>
+    {{ end }}
+  </div>
+  {{ with .Params.abstract }}
+    <h2>Abstract</h2>
+    <p>{{ . }}</p>
+  {{ end }}
+  {{ with .Resources.GetMatch "cite.bib" }}
+    <h2>BibTeX</h2>
+    <div class="panel"><pre><code>{{ .Content }}</code></pre></div>
+  {{ end }}
+  {{ with .Content }}{{ . }}{{ end }}
+</article>
+{{ end }}

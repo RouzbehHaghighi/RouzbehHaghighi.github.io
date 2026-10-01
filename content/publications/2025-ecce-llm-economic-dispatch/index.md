@@ -19,8 +19,6 @@ tags:
   - "Large Language Models"
   - "Economic Dispatch"
 featured: false
-hugoblox:
-  ids:
-    doi: "10.1109/ECCE58356.2025.11259643"
-projects: []
+doi: "10.1109/ECCE58356.2025.11259643"
+paper_url: "https://doi.org/10.1109/ECCE58356.2025.11259643"
 ---

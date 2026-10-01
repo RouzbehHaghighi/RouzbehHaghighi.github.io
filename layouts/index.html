@@ -1,0 +1,74 @@
+{{ define "main" }}
+{{ $me := site.Data.authors.me }}
+{{ $photo := resources.Get "media/authors/me.png" }}
+<section class="hero">
+  {{ with $photo }}<img class="portrait" src="{{ .RelPermalink }}" alt="Portrait of {{ $me.name.display }}">{{ end }}
+  <div>
+    <p class="kicker">{{ with index $me.affiliations 0 }}{{ .name }}{{ end }}</p>
+    <h1>{{ $me.name.display }}</h1>
+    <p class="role">{{ $me.role }}</p>
+    {{ with $me.tagline }}<p class="muted">{{ . }}</p>{{ end }}
+    {{ with $me.location }}<p class="muted">{{ . }}</p>{{ end }}
+    <div>{{ $me.bio | markdownify }}</div>
+    <ul class="links">
+      {{ range $me.links }}
+        <li><a href="{{ .url | safeURL }}">{{ .label }}</a></li>
+      {{ end }}
+    </ul>
+    <a class="button" href="{{ "cv/" | relURL }}">View CV</a>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="interests">
+  <h2 id="interests">Interests</h2>
+  <ul class="chips">
+    {{ range $me.interests }}<li>{{ . }}</li>{{ end }}
+  </ul>
+</section>
+
+<section class="section" aria-labelledby="education">
+  <h2 id="education">Education</h2>
+  <ol class="edu-list">
+    {{ range $me.education }}
+      <li>
+        <div><span class="when">{{ .year }}</span></div>
+        <div>
+          <strong>{{ .degree }}</strong>
+          <div>{{ .institution }}{{ with .location }} · {{ . }}{{ end }}</div>
+          {{ with .summary }}<p class="muted">{{ . | plainify }}</p>{{ end }}
+          {{ with .courses }}<p class="muted">Selected courses: {{ delimit . " · " }}</p>{{ end }}
+        </div>
+      </li>
+    {{ end }}
+  </ol>
+</section>
+
+<section class="section" aria-labelledby="research">
+  <h2 id="research">Research</h2>
+  {{ .Content }}
+</section>
+
+<section class="section" aria-labelledby="papers">
+  <h2 id="papers">Featured publications</h2>
+  {{ $featured := where (where site.RegularPages "Section" "publications") "Params.featured" true }}
+  {{ range $featured.ByDate.Reverse }}
+    {{ partial "pub.html" . }}
+  {{ end }}
+  <p><a href="{{ "publications/" | relURL }}">All publications</a></p>
+</section>
+
+<section class="section" aria-labelledby="news">
+  <h2 id="news">Recent news</h2>
+  <ol class="news-list">
+    {{ range first 5 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+      <li>
+        <div><time class="when" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time></div>
+        <div>
+          <a href="{{ .RelPermalink }}"><strong>{{ .Title }}</strong></a>
+          {{ with .Summary }}<p class="muted">{{ . }}</p>{{ end }}
+        </div>
+      </li>
+    {{ end }}
+  </ol>
+</section>
+{{ end }}

@@ -1,0 +1,22 @@
+{{ define "main" }}
+<header class="section">
+  <h1>{{ .Title }}</h1>
+  <div class="page-intro">{{ .Content }}</div>
+</header>
+{{ range .Params.groups }}
+  <section class="section" aria-labelledby="{{ .title | anchorize }}">
+    <h2 id="{{ .title | anchorize }}">{{ .title }}</h2>
+    {{ with .subtitle }}<p class="muted">{{ . }}</p>{{ end }}
+    {{ range .courses }}
+      <article class="course">
+        <div><span class="code">{{ .code }}</span></div>
+        <div>
+          <h3>{{ .title }}</h3>
+          {{ with .role }}<p class="muted">{{ . }}</p>{{ end }}
+          <p class="muted">{{ delimit .terms " · " }}</p>
+        </div>
+      </article>
+    {{ end }}
+  </section>
+{{ end }}
+{{ end }}

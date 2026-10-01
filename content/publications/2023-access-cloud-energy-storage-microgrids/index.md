@@ -21,8 +21,6 @@ tags:
   - "Microgrids"
   - "Reliability"
 featured: false
-hugoblox:
-  ids:
-    doi: "10.1109/ACCESS.2023.3252900"
-projects: []
+doi: "10.1109/ACCESS.2023.3252900"
+paper_url: "https://doi.org/10.1109/ACCESS.2023.3252900"
 ---

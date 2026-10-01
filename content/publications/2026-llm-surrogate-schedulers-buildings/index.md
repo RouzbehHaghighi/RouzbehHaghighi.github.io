@@ -19,8 +19,6 @@ tags:
   - "Building Energy Management"
   - "Scheduling"
 featured: true
-hugoblox:
-  ids:
-    doi: "10.1016/j.enbuild.2026.117588"
-projects: []
+doi: "10.1016/j.enbuild.2026.117588"
+paper_url: "https://doi.org/10.1016/j.enbuild.2026.117588"
 ---
