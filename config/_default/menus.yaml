@@ -6,17 +6,17 @@ main:
     url: /
     weight: 10
   - name: CV
-    url: cv/
+    url: /cv/
     weight: 20
   - name: Publications
-    url: publications/
+    url: /publications/
     weight: 30
   - name: Projects
-    url: projects/
+    url: /projects/
     weight: 40
   - name: Professional Services
-    url: professional-services/
+    url: /professional-services/
     weight: 50
   - name: Teaching
-    url: teaching/
+    url: /teaching/
     weight: 60
