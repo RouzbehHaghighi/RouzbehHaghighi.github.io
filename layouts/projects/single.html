@@ -7,11 +7,15 @@
   <h1>{{ .Title }}</h1>
   {{ with .Params.tags }}<p class="tags">{{ delimit . " · " }}</p>{{ end }}
 
-  {{ range first 1 $figures }}
-    {{ partial "figure.html" (dict "page" $page "fig" .) }}
+  {{ range $fig := first 1 $figures }}
+    {{ partial "figure.html" (dict "page" $page "fig" $fig "n" 1) }}
   {{ end }}
 
   <div class="prose">{{ .Content }}</div>
+
+  {{ range $i, $fig := after 1 $figures }}
+    {{ partial "figure.html" (dict "page" $page "fig" $fig "n" (add $i 2)) }}
+  {{ end }}
 
   {{ with .Params.tech_stack }}
     <h2 class="small-heading">Methods and tools</h2>
@@ -27,8 +31,5 @@
     </div>
   {{ end }}
 
-  {{ range after 1 $figures }}
-    {{ partial "figure.html" (dict "page" $page "fig" .) }}
-  {{ end }}
 </article>
 {{ end }}

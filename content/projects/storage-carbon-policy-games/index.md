@@ -12,7 +12,7 @@ tech_stack:
   - "Deep reinforcement learning (SAC)"
   - "Second-life batteries"
   - "EV charging stations"
-status: "Ongoing"
+status: "Completed"
 featured: false
 figures:
   - src: fig-1.png

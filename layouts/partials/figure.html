@@ -1,16 +1,17 @@
-{{- /* A figure from one of the papers: image from the page bundle, caption, and a link to the source paper. */ -}}
+{{- /* A figure from one of the papers: image from the page bundle, numbered caption, and a link to the source paper. */ -}}
 {{ $fig := .fig }}
+{{ $n := .n }}
 {{ with .page.Resources.GetMatch $fig.src }}
   {{ $img := . }}
-  {{ if gt .Width 1600 }}{{ $img = .Resize "1600x" }}{{ end }}
+  {{ if gt .Width 2200 }}{{ $img = .Resize "2200x" }}{{ end }}
   <figure class="figure">
-    <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $fig.caption | plainify }}" loading="lazy">
+    <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="Figure {{ $n }}. {{ $fig.caption | plainify }}" loading="lazy">
     <figcaption>
-      {{ $fig.caption }}
+      <span class="figure-num">Figure {{ $n }}.</span> {{ $fig.caption }}
       {{ with $fig.source }}
         {{ with site.GetPage (printf "/publications/%s" .) }}
           {{ $url := .Params.paper_url }}{{ if and (not $url) .Params.doi }}{{ $url = printf "https://doi.org/%s" .Params.doi }}{{ end }}
-          Source: {{ if $url }}<a href="{{ $url }}" rel="noopener">{{ .Params.publication.name }}, {{ .Date.Format "2006" }}</a>{{ else }}{{ .Params.publication.name }}, {{ .Date.Format "2006" }}{{ end }}.
+          <span class="figure-source">Source: {{ if $url }}<a href="{{ $url }}" rel="noopener">{{ .Params.publication.name }}, {{ .Date.Format "2006" }}</a>{{ else }}{{ .Params.publication.name }}, {{ .Date.Format "2006" }}{{ end }}.</span>
         {{ end }}
       {{ end }}
     </figcaption>

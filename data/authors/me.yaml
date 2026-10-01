@@ -10,7 +10,7 @@ status:
   icon: ''
 role: Ph.D. Candidate, Electrical, Electronics & Computer Engineering
 tagline: Electrical Engineer — Power Systems & AI
-location: Power Systems Lab, University of Michigan, 4901 Evergreen Rd, Dearborn, MI 48128
+location: Power Systems Lab, University of Michigan, MI, USA
 bio: |
   Rouzbeh Haghighi is a Ph.D. candidate in Electrical, Electronics & Computer Engineering at the
   University of Michigan-Dearborn, advised by Prof. Wencong Su. His research sits at the
@@ -48,8 +48,8 @@ interests:
   - Energy Management and Demand Response
   - Integration of Renewable Energy Technologies
   - Reliability and Resilience in Power Systems
-  - AI and Large Language Models in Power Systems
-  - Advanced Machine Learning and Deep Learning
+  - AI & Large Language Models (LLMs) in Power Systems
+  - Advanced Machine Learning & Deep Learning Techniques
 
 # Education: shown as cards on the About page and as a list on the CV page.
 education:
@@ -58,8 +58,6 @@ education:
     location: Dearborn, MI, USA
     start: 2023-08-01
     year: Aug 2023 – present
-    summary: |
-      GPA 3.95/4 · Supervisor: Prof. Wencong Su
     courses:
       - Advanced Topics in Power Systems
       - Pattern Recognition & Neural Networks
@@ -83,7 +81,7 @@ education:
     end: 2018-09-30
     year: Sep 2014 – Sep 2018
     summary: |
-      Supervisor: Prof. Alireza Fereidunian · Thesis: Reconfiguration of Distribution Networks for Loss Reduction.
+      Thesis: Reconfiguration of Distribution Networks for Loss Reduction.
     courses:
       - Analysis of Power Systems
       - Smart Grids & Microgrids
@@ -105,7 +103,6 @@ experience:
     start: 2023-08-01
     highlights:
       - "Conducting doctoral research at the intersection of power-system reliability and artificial intelligence along two complementary directions: AI for the grid, LLMs and reinforcement learning as operational decision-makers, and the grid for AI, integrating large-scale, uncertain AI data-center loads into distribution and transmission networks."
-      - "Contributor to NSF Project “Enhancing Grid Reliability and Stability with Distributed Energy Resources” (Award #2321661)."
       - "Grid Integration of AI Data-Center Loads: hosting-capacity and reliability frameworks for large, uncertain AI data-center demand, with grid-aware load coordination and energy-storage strategies."
       - "LLMs as Power-System Decision-Makers: fine-tuned and multi-agent LLMs for surrogate scheduling, economic dispatch, decentralized Volt/VAR control, and reliability-oriented clustering of DER-rich active distribution networks."
       - "Reliability Assessment under High IBR Penetration: stochastic, probabilistic frameworks for reliability and resource-adequacy metrics on grids dominated by inverter-based resources."

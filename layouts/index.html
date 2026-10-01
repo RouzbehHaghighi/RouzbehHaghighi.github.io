@@ -2,7 +2,6 @@
 {{ $me := site.Data.authors.me }}
 {{ $photo := resources.Get "media/authors/me.png" }}
 {{ $pubs := where site.RegularPages "Section" "publications" }}
-{{ $scholar := site.Params.scholar }}
 <section class="hero">
   {{ with $photo }}
     {{ $p := .Fill "400x400 Center" }}
@@ -27,16 +26,6 @@
   </div>
 </section>
 
-<p class="glance">
-  <a href="{{ "publications/" | relURL }}"><strong>{{ len $pubs }}</strong> peer-reviewed publications</a>
-  {{ with $scholar }}
-    <a href="{{ .url }}" rel="noopener"><strong>{{ .citations }}</strong> citations</a>
-    <a href="{{ .url }}" rel="noopener">h-index <strong>{{ .hindex }}</strong></a>
-  {{ end }}
-  {{ with site.Params.reviews }}<a href="{{ "professional-services/" | relURL }}"><strong>{{ . }}</strong> manuscript reviews</a>{{ end }}
-</p>
-{{ with $scholar }}<p class="stats-note">Citation counts from Google Scholar, {{ .asof }}.</p>{{ end }}
-
 <section class="section" aria-labelledby="research">
   <h2 id="research">Research</h2>
   {{ with .Params.lead }}<p class="prose">{{ . }}</p>{{ end }}
@@ -54,7 +43,7 @@
 
 <section class="section" aria-labelledby="interests">
   <h2 id="interests">Interests</h2>
-  <ul class="chips">
+  <ul class="interest-grid">
     {{ range $me.interests }}<li>{{ . }}</li>{{ end }}
   </ul>
 </section>

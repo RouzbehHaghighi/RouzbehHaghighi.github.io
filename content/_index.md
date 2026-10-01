@@ -10,4 +10,4 @@ directions:
     text: Hosting-capacity and reliability frameworks for large, uncertain AI data-center loads, with grid-aware load coordination and energy-storage strategies that expand hosting capacity while preserving reliability.
 ---
 
-I also work on reliability assessment under high inverter-based-resource penetration, resilience of interdependent infrastructure, and game-theoretic models of carbon policy and second-life battery investment, and I contribute to NSF Award #2321661, “Enhancing Grid Reliability and Stability with Distributed Energy Resources.”
+I also work on reliability assessment under high inverter-based-resource penetration, resilience of interdependent infrastructure, and game-theoretic models of carbon policy and second-life battery investment.

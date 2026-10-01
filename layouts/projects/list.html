@@ -16,7 +16,8 @@
       <article class="project" data-tags="{{ delimit .Params.tags "|" }}">
         {{ with $fig }}
           {{ with $proj.Resources.GetMatch .src }}
-            {{ $thumb := .Resize "900x" }}
+            {{ $thumb := . }}
+            {{ if gt .Width 1200 }}{{ $thumb = .Resize "1200x" }}{{ end }}
             <a class="project-figure" href="{{ $proj.RelPermalink }}" aria-hidden="true" tabindex="-1"><img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="" loading="lazy"></a>
           {{ end }}
         {{ end }}

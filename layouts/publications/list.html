@@ -1,16 +1,12 @@
 {{ define "main" }}
 {{ $pubs := .RegularPages.ByDate.Reverse }}
-{{ $nJournal := len (where $pubs "Params.publication_types" "intersect" (slice "article-journal")) }}
-{{ $nConf := len (where $pubs "Params.publication_types" "intersect" (slice "paper-conference")) }}
-{{ $nChapter := len (where $pubs "Params.publication_types" "intersect" (slice "chapter")) }}
 {{ $scholar := site.Params.scholar }}
 <header class="page-head">
   <h1>{{ .Title }}</h1>
   <div class="page-intro">{{ .Content }}</div>
-  <p class="counts">
-    <b>{{ len $pubs }}</b> publications: {{ $nJournal }} journal articles · {{ $nConf }} conference papers · {{ $nChapter }} book chapters.
-    {{ with $scholar }}Citations <b>{{ .citations }}</b> · h-index <b>{{ .hindex }}</b> (<a href="{{ .url }}">Google Scholar</a>, {{ .asof }}).{{ end }}
-  </p>
+  {{ with $scholar }}
+  <p class="counts">Citations <b>{{ .citations }}</b> · h-index <b>{{ .hindex }}</b> (<a href="{{ .url }}">Google Scholar</a>, {{ .asof }}).</p>
+  {{ end }}
 </header>
 
 {{ with .Params.under_review }}
