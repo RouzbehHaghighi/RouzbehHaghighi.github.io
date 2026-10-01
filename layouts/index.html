@@ -27,14 +27,14 @@
   </div>
 </section>
 
-<ul class="stats" aria-label="At a glance">
-  <li><a href="{{ "publications/" | relURL }}"><strong>{{ len $pubs }}</strong><span>Peer-reviewed publications</span></a></li>
+<p class="glance">
+  <a href="{{ "publications/" | relURL }}"><strong>{{ len $pubs }}</strong> peer-reviewed publications</a>
   {{ with $scholar }}
-    <li><a href="{{ .url }}" rel="noopener"><strong>{{ .citations }}</strong><span>Citations</span></a></li>
-    <li><a href="{{ .url }}" rel="noopener"><strong>{{ .hindex }}</strong><span>h-index</span></a></li>
+    <a href="{{ .url }}" rel="noopener"><strong>{{ .citations }}</strong> citations</a>
+    <a href="{{ .url }}" rel="noopener">h-index <strong>{{ .hindex }}</strong></a>
   {{ end }}
-  {{ with site.Params.reviews }}<li><a href="{{ "professional-services/" | relURL }}"><strong>{{ . }}</strong><span>Manuscript reviews</span></a></li>{{ end }}
-</ul>
+  {{ with site.Params.reviews }}<a href="{{ "professional-services/" | relURL }}"><strong>{{ . }}</strong> manuscript reviews</a>{{ end }}
+</p>
 {{ with $scholar }}<p class="stats-note">Citation counts from Google Scholar, {{ .asof }}.</p>{{ end }}
 
 <section class="section" aria-labelledby="research">
