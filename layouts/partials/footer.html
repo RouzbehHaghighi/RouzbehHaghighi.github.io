@@ -1,5 +1,7 @@
+{{ $me := site.Data.authors.me }}
 <footer class="site-footer">
   <div class="wrap">
-    <p>© {{ now.Year }} {{ .Site.Title }}</p>
+    <p><strong>{{ .Site.Title }}</strong>{{ with index $me.affiliations 0 }} · {{ .name }}{{ end }}{{ with site.Params.email }} · <a href="mailto:{{ . }}">{{ . }}</a>{{ end }}</p>
+    <p>© {{ now.Year }} {{ .Site.Title }} · Updated {{ now.Format "January 2006" }}</p>
   </div>
 </footer>

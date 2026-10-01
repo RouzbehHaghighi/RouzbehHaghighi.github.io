@@ -1,22 +1,24 @@
 {{ define "main" }}
-<header class="section">
+<header class="page-head">
   <h1>{{ .Title }}</h1>
   <div class="page-intro">{{ .Content }}</div>
 </header>
+<div class="services">
 {{ range .Params.groups }}
   <section class="section" aria-labelledby="{{ .title | anchorize }}">
     <h2 id="{{ .title | anchorize }}">{{ .title }}</h2>
-    {{ with .subtitle }}<p class="muted">{{ . }}</p>{{ end }}
+    {{ with .subtitle }}<p class="muted service-note">{{ . }}</p>{{ end }}
     {{ range .items }}
-      <article class="course">
-        <div><span class="code">{{ .badge }}</span></div>
+      <article class="service-row">
+        <span class="tag">{{ .badge }}</span>
         <div>
           <h3>{{ .title }}</h3>
-          {{ with .detail }}<p>{{ . }}</p>{{ end }}
-          {{ with .date }}<p class="muted">{{ . }}</p>{{ end }}
+          {{ with .detail }}<p class="muted">{{ . }}</p>{{ end }}
         </div>
+        {{ with .date }}<span class="service-date date">{{ . }}</span>{{ end }}
       </article>
     {{ end }}
   </section>
 {{ end }}
+</div>
 {{ end }}

@@ -2,27 +2,30 @@
 title: "Generation Expansion Planning with Carbon Policy"
 date: 2026-09-30
 weight: 8
-summary: "Game-theoretic expansion planning with carbon curtailment and incentives (M.Sc.)."
+summary: "Game-theoretic expansion planning with carbon tax, subsidies, and curtailment policies (M.Sc. research)."
 tags:
   - "Planning & Markets"
 tech_stack:
-  - "Game theory"
+  - "Generation expansion planning"
+  - "Game theory and Nash equilibrium"
   - "TLBO"
-  - "Nash equilibrium"
-  - "Carbon policy"
-links:
-  - type: custom
-    url: https://doi.org/10.1016/j.cie.2021.107713
-    label: "C&IE 2021"
-    icon: document-text
-  - type: custom
-    url: https://doi.org/10.3390/en15031172
-    label: "Energies 2022"
-    icon: document-text
+  - "Carbon tax and subsidy design"
 status: "Completed"
 featured: false
+figures:
+  - src: fig-1.png
+    caption: "Candidate power-plant technologies in the generation expansion game, from gas turbines and nuclear to wind, solar, hydro, biomass, and geothermal."
+    source: 2021-caie-generation-expansion-game-theory
+  - src: fig-2.png
+    caption: "Four strategies under government regulation: with and without a carbon tax, and with coordinated or non-coordinated players."
+    source: 2021-caie-generation-expansion-game-theory
+related:
+  - 2021-caie-generation-expansion-game-theory
+  - 2022-energies-tlbo-generation-expansion-planning
 ---
 
-A game-theoretic optimization model for long-term generation expansion planning that incorporates carbon-curtailment penalties and incentive mechanisms to promote net-zero power systems, solved with teaching–learning-based optimization.
+Long-term generation expansion planning (GEP) decides which plants to build and when, and carbon policy changes the answer. This project, carried out during my M.Sc. at Amirkabir University of Technology, modeled GEP as a game among power plants under government regulation.
 
-Related work: *Computers & Industrial Engineering* (2021) and *Energies* (2022).
+In *Computers & Industrial Engineering* we formulated GEP with a game-theoretic approach that includes a carbon tax and a government subsidy, compared four strategies for carbon reduction on an Iranian case study, and ran a sensitivity analysis on the tax and subsidy levels.
+
+In *Energies* we solved each player's expansion problem with the teaching–learning-based optimization (TLBO) algorithm, compared it with other metaheuristics, and developed a combined algorithm that reaches the Nash equilibrium among competing plants. Three scenarios evaluate the government's role in reducing carbon emissions.

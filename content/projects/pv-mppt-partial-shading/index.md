@@ -7,10 +7,10 @@ tags:
   - "Renewable Integration"
 tech_stack:
   - "Bio-inspired optimization"
-  - "MPPT"
-  - "Photovoltaics"
+  - "Maximum power point tracking"
+  - "Photovoltaic systems"
 status: "Completed"
 featured: false
 ---
 
-A bio-inspired maximum power point tracking algorithm, simulated and implemented to maximize power extraction from photovoltaic panels under partial shading, outperforming the conventional perturb-and-observe method.
+Under partial shading, the power–voltage curve of a PV array has several local peaks, and the conventional perturb-and-observe tracker can settle on the wrong one. This project designed a bio-inspired maximum power point tracking algorithm, simulated and implemented it, and showed that it extracts more power from the array under partial shading than perturb-and-observe.

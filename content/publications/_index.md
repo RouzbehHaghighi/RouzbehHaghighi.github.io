@@ -1,5 +1,12 @@
 ---
 title: Publications
+# Individual publication pages are not rendered: each title links straight to its DOI page.
+cascade:
+  - _target:
+      kind: page
+    build:
+      render: never
+      list: always
 under_review_title: Manuscripts under review
 under_review:
   - title: 'AI Data Center Load Modeling: A Timescale-Based Critical Review'
@@ -28,4 +35,4 @@ theses:
     year: "2018"
 ---
 
-Peer-reviewed journal articles, conference papers, and book chapters. Citations: 175+ · h-index: 7 (Sep 2026). Full list on [Google Scholar](https://scholar.google.com/citations?user=D66vE80AAAAJ).
+Peer-reviewed journal articles, conference papers, and book chapters, newest first. Each title links to the publisher's page.

@@ -1,5 +1,5 @@
 {{ define "main" }}
-<header class="section">
+<header class="page-head">
   <h1>{{ .Title }}</h1>
   {{ with .Params.subtitle }}<p class="page-intro">{{ . }}</p>{{ end }}
 </header>
@@ -11,11 +11,21 @@
   </div>
   <div class="cards">
     {{ range .RegularPages.ByWeight }}
+      {{ $proj := . }}
+      {{ $fig := index (.Params.figures | default slice) 0 }}
       <article class="project" data-tags="{{ delimit .Params.tags "|" }}">
-        {{ with .Params.status }}<p class="status">{{ . }}</p>{{ end }}
-        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        <p>{{ .Summary }}</p>
-        {{ with .Params.tags }}<p class="muted">{{ delimit . " · " }}</p>{{ end }}
+        {{ with $fig }}
+          {{ with $proj.Resources.GetMatch .src }}
+            {{ $thumb := .Resize "900x" }}
+            <a class="project-figure" href="{{ $proj.RelPermalink }}" aria-hidden="true" tabindex="-1"><img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="" loading="lazy"></a>
+          {{ end }}
+        {{ end }}
+        <div class="project-body">
+          {{ with .Params.status }}<p class="status {{ . | lower }}">{{ . }}</p>{{ end }}
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p>{{ .Summary }}</p>
+          {{ with .Params.tags }}<p class="tags">{{ delimit . " · " }}</p>{{ end }}
+        </div>
       </article>
     {{ end }}
   </div>

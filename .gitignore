@@ -34,3 +34,6 @@ Desktop.ini
 # Logs
 *.log
 npm-debug.log*
+
+# Local copies of published PDFs (source material only, not deployed)
+Publications/

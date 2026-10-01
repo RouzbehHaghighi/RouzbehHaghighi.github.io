@@ -13,6 +13,14 @@ pagination:
 params:
   description: 'Rouzbeh Haghighi, Ph.D. candidate in Electrical and Computer Engineering at the University of Michigan-Dearborn, working on power-system reliability, AI data-center grid integration, and large language models for grid operation.'
   email: haghighi@umich.edu
+  # Citation metrics shown on the About and Publications pages. Update these by hand.
+  scholar:
+    citations: '175+'
+    hindex: 7
+    asof: 'Sep 2026'
+    url: https://scholar.google.com/citations?user=D66vE80AAAAJ
+  # Number of manuscript reviews shown on the About page.
+  reviews: '150+'
 markup:
   goldmark:
     renderer:

@@ -4,11 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}</title>
-  <meta name="description" content="{{ with .Params.abstract }}{{ . | plainify | truncate 180 }}{{ else }}{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
+  <meta name="description" content="{{ with .Params.abstract }}{{ . | plainify | truncate 180 }}{{ else }}{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . | plainify | truncate 180 }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}{{ end }}">
   <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
   <meta property="og:description" content="{{ with .Params.abstract }}{{ . | plainify | truncate 180 }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:type" content="website">
+  {{ with resources.Get "media/authors/me.png" }}{{ $og := .Fill "600x600 Center" }}<meta property="og:image" content="{{ $og.Permalink }}">{{ end }}
+  <meta name="theme-color" content="#0b2545" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e1319" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="{{ "favicon.svg" | relURL }}">
   {{ $css := resources.Get "css/site.css" | minify }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">

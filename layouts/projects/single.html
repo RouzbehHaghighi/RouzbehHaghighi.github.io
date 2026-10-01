@@ -1,14 +1,34 @@
 {{ define "main" }}
-<article class="section">
-  <p><a href="{{ "projects/" | relURL }}">Projects</a></p>
-  {{ with .Params.status }}<p class="status">{{ . }}</p>{{ end }}
+{{ $page := . }}
+{{ $figures := .Params.figures | default slice }}
+<article class="section project-page">
+  <p class="crumbs"><a href="{{ "projects/" | relURL }}">← Projects</a></p>
+  {{ with .Params.status }}<p class="status {{ . | lower }}">{{ . }}</p>{{ end }}
   <h1>{{ .Title }}</h1>
-  {{ with .Params.tags }}<p class="muted">{{ delimit . " · " }}</p>{{ end }}
-  {{ .Content }}
-  {{ with .Params.links }}
-    <ul class="links">
-      {{ range . }}<li><a href="{{ .url }}">{{ .label }}</a></li>{{ end }}
-    </ul>
+  {{ with .Params.tags }}<p class="tags">{{ delimit . " · " }}</p>{{ end }}
+
+  {{ range first 1 $figures }}
+    {{ partial "figure.html" (dict "page" $page "fig" .) }}
+  {{ end }}
+
+  <div class="prose">{{ .Content }}</div>
+
+  {{ with .Params.tech_stack }}
+    <h2 class="small-heading">Methods and tools</h2>
+    <ul class="chips">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+  {{ end }}
+
+  {{ with .Params.related }}
+    <h2 class="small-heading">Related publications</h2>
+    <div class="pub-list">
+      {{ range . }}
+        {{ with site.GetPage (printf "/publications/%s" .) }}{{ partial "pub.html" . }}{{ end }}
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{ range after 1 $figures }}
+    {{ partial "figure.html" (dict "page" $page "fig" .) }}
   {{ end }}
 </article>
 {{ end }}

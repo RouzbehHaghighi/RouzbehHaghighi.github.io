@@ -1,11 +1,11 @@
 {{ define "main" }}
-<header class="section">
+<header class="page-head">
   <h1>{{ .Title }}</h1>
 </header>
-<ol class="news-list">
+<ol class="rows">
   {{ range .RegularPages.ByDate.Reverse }}
     <li>
-      <div><time class="when" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time></div>
+      <div><time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time></div>
       <div>
         <a href="{{ .RelPermalink }}"><strong>{{ .Title }}</strong></a>
         {{ with .Summary }}<p class="muted">{{ . }}</p>{{ end }}

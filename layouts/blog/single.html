@@ -1,5 +1,6 @@
 {{ define "main" }}
-<article class="section">
+<article class="section prose">
+  <p class="crumbs"><a href="{{ "blog/" | relURL }}">← News</a></p>
   <p class="kicker"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time></p>
   <h1>{{ .Title }}</h1>
   {{ .Content }}

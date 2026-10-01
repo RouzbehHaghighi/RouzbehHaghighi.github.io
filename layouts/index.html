@@ -1,22 +1,55 @@
 {{ define "main" }}
 {{ $me := site.Data.authors.me }}
 {{ $photo := resources.Get "media/authors/me.png" }}
+{{ $pubs := where site.RegularPages "Section" "publications" }}
+{{ $scholar := site.Params.scholar }}
 <section class="hero">
-  {{ with $photo }}<img class="portrait" src="{{ .RelPermalink }}" alt="Portrait of {{ $me.name.display }}">{{ end }}
+  {{ with $photo }}
+    {{ $p := .Fill "400x400 Center" }}
+    <img class="portrait" src="{{ $p.RelPermalink }}" width="180" height="180" alt="Portrait of {{ $me.name.display }}">
+  {{ end }}
   <div>
     <p class="kicker">{{ with index $me.affiliations 0 }}{{ .name }}{{ end }}</p>
     <h1>{{ $me.name.display }}</h1>
     <p class="role">{{ $me.role }}</p>
-    {{ with $me.tagline }}<p class="muted">{{ . }}</p>{{ end }}
-    {{ with $me.location }}<p class="muted">{{ . }}</p>{{ end }}
-    <div>{{ $me.bio | markdownify }}</div>
+    {{ with $me.tagline }}<p class="meta">{{ . }}</p>{{ end }}
+    {{ with $me.location }}<p class="meta">{{ . }}</p>{{ end }}
+    <div class="bio">{{ $me.bio | markdownify }}</div>
     <ul class="links">
       {{ range $me.links }}
-        <li><a href="{{ .url | safeURL }}">{{ .label }}</a></li>
+        <li><a href="{{ .url | safeURL }}"{{ if not (hasPrefix .url "mailto:") }} rel="noopener"{{ end }}>{{ .label }}</a></li>
       {{ end }}
     </ul>
-    <a class="button" href="{{ "cv/" | relURL }}">View CV</a>
+    <div class="cta">
+      <a class="button" href="{{ "cv/" | relURL }}">View CV</a>
+      <a class="button-secondary" href="{{ "publications/" | relURL }}">Publications</a>
+    </div>
   </div>
+</section>
+
+<ul class="stats" aria-label="At a glance">
+  <li><a href="{{ "publications/" | relURL }}"><strong>{{ len $pubs }}</strong><span>Peer-reviewed publications</span></a></li>
+  {{ with $scholar }}
+    <li><a href="{{ .url }}" rel="noopener"><strong>{{ .citations }}</strong><span>Citations</span></a></li>
+    <li><a href="{{ .url }}" rel="noopener"><strong>{{ .hindex }}</strong><span>h-index</span></a></li>
+  {{ end }}
+  {{ with site.Params.reviews }}<li><a href="{{ "professional-services/" | relURL }}"><strong>{{ . }}</strong><span>Manuscript reviews</span></a></li>{{ end }}
+</ul>
+{{ with $scholar }}<p class="stats-note">Citation counts from Google Scholar, {{ .asof }}.</p>{{ end }}
+
+<section class="section" aria-labelledby="research">
+  <h2 id="research">Research</h2>
+  {{ with .Params.lead }}<p class="prose">{{ . }}</p>{{ end }}
+  <div class="directions">
+    {{ range .Params.directions }}
+      <article class="direction">
+        <h3>{{ .title }}</h3>
+        <p>{{ .text }}</p>
+        {{ with .tag }}<a href="{{ "projects/" | relURL }}?tag={{ . | urlquery }}">Related projects →</a>{{ end }}
+      </article>
+    {{ end }}
+  </div>
+  <div class="prose">{{ .Content }}</div>
 </section>
 
 <section class="section" aria-labelledby="interests">
@@ -26,46 +59,41 @@
   </ul>
 </section>
 
-<section class="section" aria-labelledby="education">
-  <h2 id="education">Education</h2>
-  <ol class="edu-list">
-    {{ range $me.education }}
-      <li>
-        <div><span class="when">{{ .year }}</span></div>
-        <div>
-          <strong>{{ .degree }}</strong>
-          <div>{{ .institution }}{{ with .location }} · {{ . }}{{ end }}</div>
-          {{ with .summary }}<p class="muted">{{ . | plainify }}</p>{{ end }}
-          {{ with .courses }}<p class="muted">Selected courses: {{ delimit . " · " }}</p>{{ end }}
-        </div>
-      </li>
-    {{ end }}
-  </ol>
-</section>
-
-<section class="section" aria-labelledby="research">
-  <h2 id="research">Research</h2>
-  {{ .Content }}
-</section>
-
 <section class="section" aria-labelledby="papers">
   <h2 id="papers">Featured publications</h2>
-  {{ $featured := where (where site.RegularPages "Section" "publications") "Params.featured" true }}
+  {{ $featured := where $pubs "Params.featured" true }}
   {{ range $featured.ByDate.Reverse }}
     {{ partial "pub.html" . }}
   {{ end }}
-  <p><a href="{{ "publications/" | relURL }}">All publications</a></p>
+  <p class="more"><a href="{{ "publications/" | relURL }}">All {{ len $pubs }} publications →</a></p>
 </section>
 
 <section class="section" aria-labelledby="news">
   <h2 id="news">Recent news</h2>
-  <ol class="news-list">
+  <ol class="rows">
     {{ range first 5 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
       <li>
-        <div><time class="when" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time></div>
+        <div><time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time></div>
         <div>
           <a href="{{ .RelPermalink }}"><strong>{{ .Title }}</strong></a>
           {{ with .Summary }}<p class="muted">{{ . }}</p>{{ end }}
+        </div>
+      </li>
+    {{ end }}
+  </ol>
+  <p class="more"><a href="{{ "blog/" | relURL }}">All news →</a></p>
+</section>
+
+<section class="section" aria-labelledby="education">
+  <h2 id="education">Education</h2>
+  <ol class="rows">
+    {{ range $me.education }}
+      <li>
+        <div><span class="date">{{ .year }}</span></div>
+        <div>
+          <strong>{{ .degree }}</strong>
+          <p>{{ .institution }}{{ with .location }} · {{ . }}{{ end }}</p>
+          {{ with .summary }}<p class="muted">{{ . | plainify }}</p>{{ end }}
         </div>
       </li>
     {{ end }}
