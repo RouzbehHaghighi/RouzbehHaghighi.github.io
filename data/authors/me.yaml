@@ -105,7 +105,7 @@ experience:
     start: 2023-08-01
     highlights:
       - "Conducting doctoral research at the intersection of power-system reliability and artificial intelligence along two complementary directions: AI for the grid, LLMs and reinforcement learning as operational decision-makers, and the grid for AI, integrating large-scale, uncertain AI data-center loads into distribution and transmission networks."
-      - Contributor to NSF Project “Enhancing Grid Reliability and Stability with Distributed Energy Resources” (Award #2321661).
+      - "Contributor to NSF Project “Enhancing Grid Reliability and Stability with Distributed Energy Resources” (Award #2321661)."
       - "Grid Integration of AI Data-Center Loads: hosting-capacity and reliability frameworks for large, uncertain AI data-center demand, with grid-aware load coordination and energy-storage strategies."
       - "LLMs as Power-System Decision-Makers: fine-tuned and multi-agent LLMs for surrogate scheduling, economic dispatch, decentralized Volt/VAR control, and reliability-oriented clustering of DER-rich active distribution networks."
       - "Reliability Assessment under High IBR Penetration: stochastic, probabilistic frameworks for reliability and resource-adequacy metrics on grids dominated by inverter-based resources."
@@ -224,17 +224,3 @@ training:
     date: '2025'
   - title: “Harnessing Hardware-in-the-Loop Simulation for Digital Power Innovation in e-Mobility and Grid Modernization,” Typhoon HIL / LS Electric, University of Michigan-Dearborn
     date: Apr 2024
-
-references:
-  - name: Prof. Wencong Su
-    role: Chair and Professor
-    org: Electrical and Computer Engineering, University of Michigan-Dearborn
-    email: wencong@umich.edu
-  - name: Dr. Van-Hai Bui
-    role: Assistant Professor
-    org: Electrical and Computer Engineering, University of Michigan-Dearborn
-    email: vhbui@umich.edu
-  - name: Dr. Guilherme Hollweg
-    role: Assistant Professor
-    org: Electrical and Computer Engineering, University of Michigan-Dearborn
-    email: hollweg@umich.edu
