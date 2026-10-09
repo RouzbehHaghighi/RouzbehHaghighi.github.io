@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $me := site.Data.authors.me }}
 {{ $photo := resources.Get "media/authors/me.png" }}
-{{ $pubs := where site.RegularPages "Section" "publications" }}
+{{/* $pubs := where site.RegularPages "Section" "publications" */}}
 <section class="hero">
   {{ with $photo }}
     {{ $p := .Fill "400x400 Center" }}
@@ -16,7 +16,12 @@
     <div class="bio">{{ $me.bio | markdownify }}</div>
     <ul class="links">
       {{ range $me.links }}
-        <li><a href="{{ .url | safeURL }}"{{ if not (hasPrefix .url "mailto:") }} rel="noopener"{{ end }}>{{ .label }}</a></li>
+        <li>
+          <a href="{{ .url | safeURL }}"{{ if not (hasPrefix .url "mailto:") }} rel="noopener"{{ end }}{{ with .icon }} class="with-icon"{{ end }}>
+            {{ with .icon }}<img src="{{ printf "icons/%s.svg" . | relURL }}" width="20" height="20" alt="">{{ end }}
+            <span>{{ .label }}</span>
+          </a>
+        </li>
       {{ end }}
     </ul>
     <div class="cta">
@@ -26,6 +31,7 @@
   </div>
 </section>
 
+{{/*
 <section class="section" aria-labelledby="research">
   <h2 id="research">Research</h2>
   {{ with .Params.lead }}<p class="prose">{{ . }}</p>{{ end }}
@@ -40,14 +46,16 @@
   </div>
   <div class="prose">{{ .Content }}</div>
 </section>
+*/}}
 
 <section class="section" aria-labelledby="interests">
-  <h2 id="interests">Interests</h2>
+  <h2 id="interests">Research Interests</h2>
   <ul class="interest-grid">
     {{ range $me.interests }}<li>{{ . }}</li>{{ end }}
   </ul>
 </section>
 
+{{/*
 <section class="section" aria-labelledby="papers">
   <h2 id="papers">Featured publications</h2>
   {{ $featured := where $pubs "Params.featured" true }}
@@ -56,6 +64,7 @@
   {{ end }}
   <p class="more"><a href="{{ "publications/" | relURL }}">All {{ len $pubs }} publications →</a></p>
 </section>
+*/}}
 
 <section class="section" aria-labelledby="news">
   <h2 id="news">Recent news</h2>

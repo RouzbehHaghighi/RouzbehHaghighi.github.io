@@ -149,9 +149,15 @@ em { font-style: italic; }
 
 .links { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 1rem 0 0; padding: 0; list-style: none; }
 .links a {
-  display: inline-block; font-size: 0.88rem; font-weight: 500; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.88rem; font-weight: 500; text-decoration: none;
   color: var(--text); background: var(--bg-alt); border: 1px solid var(--line);
   padding: 0.28rem 0.7rem; border-radius: 999px;
+}
+.links a.with-icon { padding-left: 0.4rem; }
+.links a img {
+  width: 22px; height: 22px; flex: none; box-sizing: content-box;
+  background: #fff; border-radius: 5px; padding: 3px;
 }
 .links a:hover { border-color: var(--line-strong); color: var(--navy); }
 

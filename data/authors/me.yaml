@@ -13,7 +13,7 @@ tagline: Electrical Engineer — Power Systems & AI
 location: Power Systems Lab, University of Michigan, MI, USA
 bio: |
   Rouzbeh Haghighi is a Ph.D. candidate in Electrical, Electronics & Computer Engineering at the
-  University of Michigan-Dearborn, advised by Prof. Wencong Su. His research sits at the
+  University of Michigan-Dearborn. His research sits at the
   intersection of power-system reliability and artificial intelligence: large language models and
   reinforcement learning as operational decision-makers for the grid, and hosting-capacity and
   reliability frameworks for integrating large, uncertain AI data-center loads into distribution
@@ -25,22 +25,26 @@ affiliations:
     url: https://umdearborn.edu/
 
 links:
-  - url: mailto:haghighi@umich.edu
-    label: haghighi@umich.edu
   - url: mailto:haghighirouzbeh@gmail.com
     label: haghighirouzbeh@gmail.com
   - url: https://www.linkedin.com/in/haghighirouzbeh/
     label: LinkedIn
+    icon: linkedin
   - url: https://scholar.google.com/citations?user=D66vE80AAAAJ
     label: Google Scholar
+    icon: googlescholar
   - url: https://www.researchgate.net/profile/Rouzbeh-Haghighi
     label: ResearchGate
+    icon: researchgate
   - url: https://www.scopus.com/authid/detail.uri?authorId=57284537900
     label: Scopus
+    icon: scopus
   - url: https://orcid.org/0009-0006-7710-1266
     label: ORCID
+    icon: orcid
   - url: https://github.com/RouzbehHaghighi
     label: GitHub
+    icon: github
 
 interests:
   - Power System Modeling and Optimization
